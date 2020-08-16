@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+    <form action="" method="POST">
+         {% csrf_token %}
+
+            <label for="fname" >First Name </label>
+            {{ form.fname }}
+            <br>
+            <label for="lname">Last Name</label>
+            {{ form.lname }}
+            <br>
+            <label for="salary">Salary </label>
+            {{ form.salary }}
+            <br>
+            <label for="email">Email </label>
+            {{ form.email }}
+            <br>
+            <button type="submit" class="btn btn-primary">Add Record</button>
+    </form>
+    </div>
+</div>
+{% endblock %}
